@@ -1,0 +1,70 @@
+
+    
+    "type": "object"
+    "title": "The History Schema",
+    "description": "This is the schema that comprises the format of History entity.",
+    "default": {
+	},
+    "required": [
+        "dealer",
+        "car",
+        "id",
+        "date",
+        "price",
+        "onsale"
+    ],
+    "properties": {
+        "dealer": {
+            "$id": "#/dealer",
+            "type": "integer",
+            "title": "The Dealer Schema",
+            "description": "Dealer object id",
+            "default": 0,
+            "examples": [
+                2
+            ]
+        },
+        "car": {
+            "$id": "#/car",
+            "type": "integer",
+            "title": "The Car Schema",
+            "description": "car object id",
+            "default": 0,
+            "examples": [
+                    12               
+            ],            
+            
+        },
+        "id": {
+            "$id": "#/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "description": "Id of the record in the database",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
+		"price": {
+            "$id": "#/price",
+            "type": "integer",
+            "title": "The Price Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                450000
+            ]
+        },
+         "onsale": {
+            "$id": "#/onsale",
+            "type": "boolean",
+            "title": "The Onsale Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": True,
+            "examples": [
+                False
+            ]
+        }
+        
+    }
+}

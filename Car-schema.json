@@ -1,0 +1,113 @@
+
+    
+    "type": "object"
+    "title": "The Car Schema",
+    "description": "This is the schema that comprises the format of Car entity.",
+    "default": {
+	"year_built":2021
+	"mileage":0
+	"onsale":True
+	},
+    "required": [
+        "brand",
+        "model",
+        "id",
+        "color",
+        "price",
+        "vendor_id"
+    ],
+    "properties": {
+        "brand": {
+            "$id": "#/brand",
+            "type": "string",
+            "title": "The Brand Schema",
+            "description": "Manufacturer of the car",
+            "default": '',
+            "examples": [
+                "Toyota", "Suzuki"
+            ]
+        },
+        "model": {
+            "$id": "#/model",
+            "type": "string",
+            "title": "The Model Schema",
+            "description": "Specific model of the car",
+            "default": '',
+            "examples": [
+                    "Swift", "Logan"                
+            ],            
+            
+        },
+        "id": {
+            "$id": "#/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "description": "Id in the database",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
+        "color": {
+            "$id": "#/color",
+            "type": "string",
+            "title": "The Color Schema",
+            "description": "Color of the car",
+            "default": "",
+            "examples": [
+                "green"
+            ]
+        },
+        "price": {
+            "$id": "#/price",
+            "type": "integer",
+            "title": "The Price Schema",
+            "description": "Price of the car in roubles",
+            "default": 0,
+            "examples": [
+                450000
+            ]
+        },
+        "vendor_id": {
+            "$id": "#/vendor_id",
+            "type": "integer",
+            "title": "The Vendor Schema",
+            "description": "Id of a Dealer object",
+            "default": 0,
+            "examples": [
+               3
+            ]
+           
+        },
+		 "onsale": {
+            "$id": "#/onsale",
+            "type": "boolean",
+            "title": "The Onsale Schema",
+            "description": "Indicates whether car is available on the market",
+            "default": True,
+            "examples": [
+                False
+            ]
+        },
+		 "year_built": {
+            "$id": "#/year_built",
+            "type": "integer",
+            "title": "The Year_built Schema",
+            "description": "Year when car was manufatured",
+            "default": 2021,
+            "examples": [
+                1999
+            ]
+        },
+		 "mileage": {
+            "$id": "#/mileage",
+            "type": "integer",
+            "title": "The Mileage Schema",
+            "description": "Amount of kilometres run",
+            "default": 0,
+            "examples": [
+                100000, 2500
+            ]
+        },
+    }
+}

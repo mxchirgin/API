@@ -2,13 +2,14 @@
 import datetime
 import imp
 from migrate.versioning import api
-import sys
-sys.path.append('C:\\Users\\maxch\\AppData\\Local\\Programs\\Python\\Python38\\REST API')
+import pathlib
+p =pathlib.Path(__file__).parent.parent.absolute()
+sys.path.append(str(p))
 import os
 from app import db
 
-SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join('C:\\Users\\maxch\\AppData\\Local\\Programs\\Python\\Python38\\REST API', 'api.db')
-SQLALCHEMY_MIGRATE_REPO = os.path.join('C:\\Users\\maxch\\AppData\\Local\\Programs\\Python\\Python38\\REST API', 'db_repository')
+SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(str(p), 'api.db')
+SQLALCHEMY_MIGRATE_REPO = os.path.join(str(p), 'db_repository')
 migration = SQLALCHEMY_MIGRATE_REPO + '/versions/%03d_migration.py' % (api.db_version(SQLALCHEMY_DATABASE_URI, SQLALCHEMY_MIGRATE_REPO) + 1)
 tmp_module = imp.new_module('old_model')
 old_model = api.create_model(SQLALCHEMY_DATABASE_URI, SQLALCHEMY_MIGRATE_REPO)

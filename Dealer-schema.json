@@ -1,0 +1,81 @@
+
+    
+    "type": "object"
+    "title": "The Dealer Schema",
+    "description": "This is the schema that comprises the format of Dealer entity.",
+    "default": {	
+	"operating":True
+	},
+    "required": [
+        "name",
+        "district",
+        "id",
+        "operating",
+        "openingtime",
+        "closingtime"
+    ],
+    "properties": {
+        "name": {
+            "$id": "#/name",
+            "type": "string",
+            "title": "The Name Schema",
+            "description": "Seller of cars",
+            "default": '',
+            "examples": [
+                "ROLF", "CarPrice"
+            ]
+        },
+        "district": {
+            "$id": "#/district",
+            "type": "string",
+            "title": "The District Schema",
+            "description": "Physical location of seller (Saint-Petersburg districts or suburbs)",
+            "default": '',
+            "examples": [
+                    "Vasileostrovsky","Peterhof"                
+            ],            
+            
+        },
+        "id": {
+            "$id": "#/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "description": "Id in the database",
+            "default": 0,
+            "examples": [
+                1
+            ]
+        },
+        "operating": {
+            "$id": "#/operating",
+            "type": "boolean",
+            "title": "The operating Schema",
+            "description": "Indicates whether seller is in buisness",
+            "default": True,
+            "examples": [
+                False
+            ]
+        },
+        "openingtime": {
+            "$id": "#/openingtime",
+            "type": "time",
+            "title": "The Openingtime Schema",
+            "description": "time when seller's office opens",
+            "default": None,
+            "examples": [
+                "10:00"
+            ]
+        },
+        "closingtime": {
+            "$id": "#/closingtime",
+            "type": "time",
+            "title": "The closingtime Schema",
+            "description": "time when seller's office closes.",
+            "default": None,
+            "examples": [
+               "23:00"
+            ]
+           
+        }
+    }
+}
